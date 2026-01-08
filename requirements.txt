@@ -1,0 +1,16 @@
+numpy
+scipy
+pandas
+scikit-learn
+opencv-python
+torch --index-url https://download.pytorch.org/whl/cu121
+torchvision --index-url https://download.pytorch.org/whl/cu121
+transformers[torch]
+langchain
+chromadb
+uvicorn
+pydantic
+fastapi
+matplotlib
+seaborn
+streamlit
