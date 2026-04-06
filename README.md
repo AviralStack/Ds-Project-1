@@ -47,5 +47,45 @@ The model uses historical data to identify patterns and predict outcomes.
 ├── college_student_placement_dataset.csv
 ├── likelihood_distribution_params.pkl
 ├── eigen_vectors.npy
-├── requirements.txt
+├── requirementstxt
 └── start-backend-frontend.sh
+```
+---
+
+## 🚀 Installation & Setup
+
+### 🔧 Prerequisites
+
+Make sure you have installed:
+
+- Python 3.10+  
+- pip  
+- Git  
+- Docker (optional)  
+
+---
+
+### 📥 Clone the Repository
+
+```bash
+git clone https://github.com/AviralStack/Ds-Project-1.git
+cd Ds-Project-1
+
+```
+### 📦 Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+### ▶️ Running the Project
+#### 🟢 Method 1: Using Shell Script (Recommended)
+```bash
+bash start-backend-frontend.sh
+```
+### 🌐 Access the Application
+#### Frontend: http://localhost:8501
+#### Backend API: http://localhost:5000
+
+
+
+
