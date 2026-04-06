@@ -6,9 +6,10 @@ from fastapi import FastAPI, Query
 from typing import Annotated
 from pydantic import BaseModel
 
+
 def determine_normalizing_probability(placement_equals_0_likelihood, placement_equals_1_likelihood):
-    return (placement_equals_0_likelihood * (1 - PLACEMENT_EQUALS_1_PRIOR)) +\
-        (placement_equals_1_likelihood * PLACEMENT_EQUALS_1_PRIOR)
+    return (placement_equals_0_likelihood * (1 - PLACEMENT_EQUALS_1_PRIOR)) + \
+    (placement_equals_1_likelihood * PLACEMENT_EQUALS_1_PRIOR)
 
 def determine_placement_posterior_probability(input_features):
 
@@ -60,7 +61,8 @@ def home_page():
 
 def compute_probability(input_features: InputFeatureVector):
     input_features_values_list = list()
-    for input_feature_name ,input_features_values in input_features.model_fields.items():
+    for input_feature_name ,input_features_values in InputFeatureVector.model_fields.items():
         input_features_values_list.append(getattr(input_features, input_feature_name))
     
-    return determine_placement_posterior_probability(input_features_values_list)
+    response = determine_placement_posterior_probability(input_features_values_list)
+    return response
